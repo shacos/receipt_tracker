@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Receipt Details</h2>
+  <dl>
+    <dt>Store Name:</dt>
+    <dd>{{ receipt.store_name }}</dd>
+
+    <dt>Date of Purchase:</dt>
+    <dd>{{ receipt.date_of_purchase }}</dd>
+
+    <dt>Item List:</dt>
+    <dd>{{ receipt.item_list }}</dd>
+
+    <dt>Total Amount:</dt>
+    <dd>{{ receipt.total_amount }}</dd>
+  </dl>
+
+  <p>
+    <a href="{% url 'receipt_list' %}">Back to Receipt List</a>
+  </p>
+{% endblock %}
